@@ -95,7 +95,7 @@ eval "$(docker-machine env --swarm swarm-0)"
 #Create Docker-Compose yml
 echo '---
 HAPROXY:
-image: bfirsh/interlock-haproxy-swarm
+  image: bfirsh/interlock-haproxy-swarm
   ports:
   - 80:8080
   environment:
