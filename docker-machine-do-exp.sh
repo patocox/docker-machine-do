@@ -100,11 +100,11 @@ image: bfirsh/interlock-haproxy-swarm
   - 80:8080
   environment:
   - DOCKER_HOST
-  - constraint:node==swarm-master
+  - constraint:node==swarm-0
   volumes:
   - /etc/docker:/etc/docker
 WP:
-  image: centurylink/wordpress:3.9.1
+  image: centurylink/wordpress:3.9.1 
   ports:
   - 8080:80
   links:
