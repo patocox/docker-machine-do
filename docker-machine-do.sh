@@ -31,8 +31,9 @@ docker-machine --debug create \
   swarm-master
 
 #Create Swarm Nodes and configure
-for i in $(seq 1 $SWARM_NODES); do
-	docker-machine create \
+SWARM_NODES=$SWARM_NODES-1
+for i in $(seq 0 $SWARM_NODES); do
+	docker-machine --debug create \
 	  --driver digitalocean \
 	  --digitalocean-access-token $API_TOKEN \
 	  --digitalocean-private-networking \
