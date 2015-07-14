@@ -40,7 +40,6 @@ docker-machine --debug create \
     --digitalocean-private-networking \
     --digitalocean-image="ubuntu-14-10-x64" \
     --engine-install-url="https://experimental.docker.com" \
-    --engine-opt="default-network=overlay:multihost" \
     --engine-opt="kv-store=consul:$(docker-machine ip consul):8500" \
     --engine-label="com.docker.network.driver.overlay.bind_interface=eth0" \
     swarm-0
@@ -75,7 +74,6 @@ for i in $(seq 1 $SWARM_NODES); do
         --digitalocean-private-networking \
 	    --digitalocean-image="ubuntu-14-10-x64" \
 	    --engine-install-url="https://experimental.docker.com" \
-	    --engine-opt="default-network=overlay:multihost" \
 	    --engine-opt="kv-store=consul:$(docker-machine ip consul):8500" \
 	    --engine-label="com.docker.network.driver.overlay.bind_interface=eth0" \
 	    --engine-label="com.docker.network.driver.overlay.neighbor_ip=$(docker-machine ip swarm-0)" \
