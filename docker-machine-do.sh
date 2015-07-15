@@ -42,7 +42,7 @@ for i in $(seq 1 $SWARM_NODES); do
 done
 
 #Switch to Swarm-master
-eval "$(docker-machine env --swarm swarm-master)"
+eval "$(docker-machine env swarm-master)"
 
 #Create Docker-Compose yml
 echo '---
