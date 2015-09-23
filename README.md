@@ -9,5 +9,6 @@
   
 ### Post-run setup
   1. After script runs, switch to the swarm's daemon: `$ eval "$(docker-machine env --swarm swarm-master)"`
-  2. Deploy a docker-compose.yml to it!
+  2. Deploy redis to it: `$ docker run -d redis`
+  3. Run `$ docker ps` to see which node it landed on...
 
