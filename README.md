@@ -1,4 +1,4 @@
-# DockerSwarm on Digigtal Ocean
+# Docker Swarm on Digital Ocean
 ### Script Instructions 
   1. Create a small 14.04x64 droplet on DigitalOcean to act as your admin box. 
   2. SSH into it and use the contents of **docker-machine-do.sh** to create a script called `swarm.sh` and add your API Token for DigitalOcean and how many swarm nodes you would like.
